@@ -10,6 +10,7 @@ public class VendingMachine {
         for (Drink drink : drinkList.getDrinkList()) {
             if (this.moneyCalculator.drinkCanBeBought(moneyBox,drink)) {
                 drink.getButton().setLightStatus(true);
+                System.out.println(drink.getName() + " is available to purchase.");
             }
         }
     }
@@ -20,5 +21,9 @@ public class VendingMachine {
 
     public DrinkList drinkList() {
         return drinkList;
+    }
+
+    public String pushButton(String drinkName) {
+        return drinkName + " is dispensed.";
     }
 }

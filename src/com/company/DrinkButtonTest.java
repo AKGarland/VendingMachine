@@ -4,6 +4,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 public class DrinkButtonTest {
     private MoneyBox moneyBox;
@@ -28,6 +29,5 @@ public class DrinkButtonTest {
     public void buttonCannotBePushedWhenLightOff() {
         assertEquals("Insufficient funds for this item", vendingMachine.drinkList().getDrink(1).getButton().pushButton());
     }
-
 
 }

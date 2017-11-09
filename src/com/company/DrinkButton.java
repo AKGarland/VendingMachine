@@ -7,7 +7,7 @@ public class DrinkButton {
         return lightStatus;
     }
 
-    public boolean setLightStatus(Boolean status) { return this.lightStatus = status;    }
+    public boolean setLightStatus(Boolean status) { return this.lightStatus = status; }
 
     public String pushButton() {
         return "Insufficient funds for this item";
