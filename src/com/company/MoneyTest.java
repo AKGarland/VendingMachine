@@ -14,26 +14,27 @@ public class MoneyTest {
     }
     @Test
     public void moneyClassHasTenPence(){
-        assertEquals(10,money.getTenPence());
+        assertEquals(10,money.tenPence().getValue());
     }
 
     @Test
     public void moneyClassHasTwentyPence(){
-        assertEquals(20,money.getTwentyPence());
+        assertEquals(20,money.twentyPence().getValue());
     }
 
     @Test
     public void moneyClassHasFiftyPence(){
-        assertEquals(50,money.getFiftyPence());
+        assertEquals(50,money.fiftyPence().getValue());
     }
 
     @Test
     public void moneyClassHasOnePound(){
-        assertEquals(100,money.getOnePound());
+        assertEquals(100,money.onePound().getValue());
     }
 
     @Test
     public void moneyClassHasTwoPound(){
-        assertEquals(200,money.getTwoPound());
+        money.twoPound();
+        assertEquals(200,money.twoPound().getValue());
     }
 }

@@ -1,29 +1,39 @@
 package com.company;
 
 public class Money {
-    public int tenPence = 10;
-    private int twentyPence = 20;
-    private int fiftyPence = 50;
-    private int onePound = 100;
-    private int twoPound = 200;
 
-    public int getTenPence() {
-        return tenPence;
+    private int value;
+
+    public int getValue() {
+        return value;
     }
 
-    public int getTwentyPence() {
-        return twentyPence;
+    public Money tenPence() {
+        Money money = new Money();
+        money.value = 10;
+        return money;
     }
 
-    public int getFiftyPence() {
-        return fiftyPence;
+    public Money twentyPence() {
+        Money money = new Money();
+        money.value = 20;
+        return money;
+    }
+    public Money fiftyPence() {
+        Money money = new Money();
+        money.value = 50;
+        return money;
     }
 
-    public int getOnePound() {
-        return onePound;
+    public Money onePound() {
+        Money money = new Money();
+        money.value = 100;
+        return money;
     }
 
-    public int getTwoPound() {
-        return twoPound;
+    public Money twoPound() {
+        Money money = new Money();
+        money.value = 200;
+        return money;
     }
 }

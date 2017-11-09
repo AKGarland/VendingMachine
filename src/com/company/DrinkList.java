@@ -15,5 +15,6 @@ public class DrinkList {
 
     public void addDrinkToList(Drink drink) {
         this.drinkList.add(drink);
+        System.out.println(drink.getName() + " has been added to the vending machine.");
     }
 }
