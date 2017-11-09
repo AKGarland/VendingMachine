@@ -22,19 +22,19 @@ public class MoneyBoxTest {
         assertEquals(10, moneyBox.getTotal());
     }
 
-//    @Test
-//    public void moneyBoxTakesTwoTenPencesAndContainsTwentyPence() {
-//        moneyBox.add(money.getTenPence());
-//        moneyBox.add(money.getTenPence());
-//
-//        assertEquals(20, moneyBox.getTotal());
-//    }
-//
-//    @Test
-//    public void moneyBoxReturnsFortyWhenTenIsDeductedFromFifty() {
-//        moneyBox.add(money.getFiftyPence());
-//        moneyBox.subtract(money.getTenPence());
-//
-//        assertEquals(40, moneyBox.getTotal());
-//    }
+    @Test
+    public void moneyBoxTakesTwoTenPenceAndContainsTwentyPence() {
+        moneyBox.add(money.tenPence());
+        moneyBox.add(money.tenPence());
+
+        assertEquals(20, moneyBox.getTotal());
+    }
+
+    @Test
+    public void moneyBoxReturnsFortyWhenTenIsDeductedFromFifty() {
+        moneyBox.add(money.fiftyPence());
+        moneyBox.subtract(money.tenPence());
+
+        assertEquals(40, moneyBox.getTotal());
+    }
 }
