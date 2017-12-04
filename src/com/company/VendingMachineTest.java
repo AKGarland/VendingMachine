@@ -36,6 +36,8 @@ public class VendingMachineTest {
         vendingMachine.input(money.twentyPence());
         vendingMachine.input(money.twentyPence());
 
-        assertEquals("Cola is dispensed.", vendingMachine.pushButton("Cola"));
+        assertEquals("Cola is dispensed.", vendingMachine.pushButton(2));
     }
+
+
 }

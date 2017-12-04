@@ -23,7 +23,10 @@ public class VendingMachine {
         return drinkList;
     }
 
-    public String pushButton(String drinkName) {
-        return drinkName + " is dispensed.";
+    public String pushButton(int drinkNumber) {
+        if(drinkNumber>0 && drinkNumber<drinkList.getDrinkList().size()) {
+            return drinkList.getDrinkList().get(drinkNumber - 1).getName() + " is dispensed.";
+        }
+        return "This drink does not exist";
     }
 }

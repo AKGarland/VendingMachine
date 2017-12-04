@@ -1,11 +1,11 @@
 
-‘squid:S1319"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(õÍ£“üÿÿÿÿ8•ïµáù+
-Y
-squid:S106"9Replace this use of System.out or System.err by a logger.(Œ‡²«ùÿÿÿÿ8ø’‰ú+
+4squid:S1700"Rename field "drinkList"(‰¿‹ë8²İ³áù+
 ˆ"squid:ClassVariableVisibilityCheck"UMake drinkList a static final constant or non-public and provide accessors if needed.(‰¿‹ë8²İ³áù+
+squid:S1319"tThe type of the "drinkList" object should be an interface such as "List" rather than the implementation "ArrayList".(‰¿‹ë8²İ³áù+
 T
 squid:S106"9Replace this use of System.out or System.err by a logger.(ããŠ8›šèˆú+
-squid:S1319"tThe type of the "drinkList" object should be an interface such as "List" rather than the implementation "ArrayList".(‰¿‹ë8²İ³áù+
-4squid:S1700"Rename field "drinkList"(‰¿‹ë8²İ³áù+
+‘squid:S1319"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(õÍ£“üÿÿÿÿ8•ïµáù+
 Y
 squid:S106"9Replace this use of System.out or System.err by a logger.(¥¤Öšıÿÿÿÿ8††É„ú+
+Y
+squid:S106"9Replace this use of System.out or System.err by a logger.(Œ‡²«ùÿÿÿÿ8ø’‰ú+
