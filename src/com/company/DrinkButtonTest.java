@@ -4,30 +4,29 @@ import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
 
 public class DrinkButtonTest {
+    private Drink greenTea;
+    private DrinkList drinkList;
     private MoneyBox moneyBox;
-    private Money money;
-    private VendingMachine vendingMachine;
+    private DrinkButton drinkButton;
 
     @Before
     public void setUp() {
-        money = new Money();
-        vendingMachine = new VendingMachine();
+        greenTea = new Drink(240, "Green tea");
+        drinkList = new DrinkList();
+        drinkList.addDrinkToList(greenTea);
     }
 
     @Test
-    public void drinkButtonSwitchesOnWhenMoneyBoxHasSufficientFunds() {
-        vendingMachine.input(money.twoPound());
-        vendingMachine.input(money.fiftyPence());
+    public void hasMethodThatReturnsTrueWhenComparingAdequateMoneyBoxTotalWithDrinkPrice() {
+        moneyBox = new MoneyBox();
+        drinkButton = new DrinkButton();
+        Money money = new Money();
+        moneyBox.add(money.twoPound());
+        moneyBox.add(money.twoPound());
 
-        assertEquals(true, vendingMachine.drinkList().getDrink(1).getButton().getLightStatus());
+        drinkButton.drinkPurchasable(moneyBox, greenTea);
+        assertEquals(true, drinkButton.drinkPurchasable(moneyBox, greenTea));
     }
-
-    @Test
-    public void buttonCannotBePushedWhenLightOff() {
-        assertEquals("Insufficient funds for this item", vendingMachine.drinkList().getDrink(1).getButton().pushButton());
-    }
-
 }

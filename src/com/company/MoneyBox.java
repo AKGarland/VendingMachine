@@ -3,7 +3,7 @@ package com.company;
 public class MoneyBox {
     private Money currentAmount;
     private int totalAmount = 0;
-    private MoneyCalculator moneyCalculator = new MoneyCalculator();
+    private DrinkButton drinkButton = new DrinkButton();
 
     public int add(Money money) {
         this.totalAmount += money.getValue();
@@ -15,9 +15,9 @@ public class MoneyBox {
         return this.totalAmount;
     }
 
-    public int subtract(Money money) {
-        this.totalAmount -= money.getValue();
-        System.out.println(money.getValue() + " has been subtracted.");
+    public int subtract(int amount) {
+        this.totalAmount -= amount;
+        System.out.println(amount + " has been subtracted.");
         return this.totalAmount;
     }
 }

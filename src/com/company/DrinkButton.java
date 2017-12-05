@@ -1,15 +1,12 @@
 package com.company;
 
 public class DrinkButton {
-    private boolean lightStatus;
 
-    public boolean getLightStatus() {
-        return lightStatus;
-    }
-
-    public boolean setLightStatus(Boolean status) { return this.lightStatus = status; }
-
-    public String pushButton() {
-        return "Insufficient funds for this item";
+    public Boolean drinkPurchasable(MoneyBox moneyBox, Drink drink) {
+        if(moneyBox.getTotal() < drink.getPrice()){
+            return false;
+        }
+        System.out.println(drink.getName() + " is available to purchase.");
+        return true;
     }
 }

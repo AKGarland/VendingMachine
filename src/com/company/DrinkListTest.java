@@ -19,12 +19,10 @@ public class DrinkListTest {
     }
 
     @Test
-    public void drinkListContainsGreenTea(){
+    public void drinkListContainsGreenTea() {
         assertEquals("Green tea", drinkList.getDrinkList().get(0).getName());
     }
 
-    @Test
-    public void eachDrinkAddedToDrinkListHasButtonSwitchedOff() {
-        assertEquals(false, drinkList.getDrinkList().get(0).getButton().getLightStatus());
-    }
+
 }
+

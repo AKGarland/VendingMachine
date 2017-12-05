@@ -35,17 +35,9 @@ public class MoneyBoxTest {
     @Test
     public void returnsFortyWhenTenIsDeductedFromFifty() {
         moneyBox.add(money.fiftyPence());
-        moneyBox.subtract(money.tenPence());
+        moneyBox.subtract(10);
 
         assertEquals(40, moneyBox.getTotal());
     }
 
-    @Test
-    public void tenPenceReturnedAfterBuyingGreenTea() {
-        vendingMachine.input(money.twoPound());
-        vendingMachine.input(money.fiftyPence());
-        vendingMachine.pushButton(1);
-
-        assertEquals(money.tenPence(), moneyBox.getTotal());
-    }
 }

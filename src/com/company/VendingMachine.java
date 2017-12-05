@@ -2,16 +2,14 @@ package com.company;
 
 public class VendingMachine {
     private MoneyBox moneyBox = new MoneyBox();
-    private MoneyCalculator moneyCalculator = new MoneyCalculator();
+    private DrinkButton drinkButton = new DrinkButton();
     private DrinkList drinkList = new DrinkList();
+    private Dispenser dispenser = new Dispenser();
 
     public void input(Money money) {
-        moneyBox.add(money);
-        for (Drink drink : drinkList.getDrinkList()) {
-            if (this.moneyCalculator.drinkCanBeBought(moneyBox,drink)) {
-                drink.getButton().setLightStatus(true);
-                System.out.println(drink.getName() + " is available to purchase.");
-            }
+        this.moneyBox.add(money);
+        for (Drink drink : this.drinkList.getDrinkList()) {
+            drinkButton.drinkPurchasable(this.moneyBox, drink);
         }
     }
 
@@ -20,12 +18,13 @@ public class VendingMachine {
     }
 
     public DrinkList drinkList() {
-        return drinkList;
+        return this.drinkList;
     }
 
     public String pushButton(int drinkNumber) {
-        if(drinkNumber>0 && drinkNumber<drinkList.getDrinkList().size()) {
-            return drinkList.getDrinkList().get(drinkNumber - 1).getName() + " is dispensed.";
+        Drink drink = this.drinkList.getDrink(drinkNumber);
+        if(drinkNumber>0 && drinkNumber<this.drinkList.getDrinkList().size()) {
+            dispenser.dispenseIfPurchasable(this.moneyBox,drink);
         }
         return "This drink does not exist";
     }
