@@ -5,28 +5,27 @@ import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 
-public class DrinkButtonTest {
+public class StockButtonTest {
     private Drink greenTea;
-    private DrinkList drinkList;
+    private StockList stockList;
     private MoneyBox moneyBox;
-    private DrinkButton drinkButton;
+    private StockButton stockButton;
 
     @Before
     public void setUp() {
         greenTea = new Drink(240, "Green tea");
-        drinkList = new DrinkList();
-        drinkList.addDrinkToList(greenTea);
+        stockList = new StockList();
+        stockList.addStockToList(greenTea);
     }
 
     @Test
     public void hasMethodThatReturnsTrueWhenComparingAdequateMoneyBoxTotalWithDrinkPrice() {
         moneyBox = new MoneyBox();
-        drinkButton = new DrinkButton();
+        stockButton = new StockButton();
         Money money = new Money();
-        moneyBox.add(money.twoPound());
-        moneyBox.add(money.twoPound());
+        moneyBox.add(400);
 
-        drinkButton.drinkPurchasable(moneyBox, greenTea);
-        assertEquals(true, drinkButton.drinkPurchasable(moneyBox, greenTea));
+        stockButton.stockPurchasable(moneyBox, greenTea);
+        assertEquals(true, stockButton.stockPurchasable(moneyBox, greenTea));
     }
 }

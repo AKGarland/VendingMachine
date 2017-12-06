@@ -1,12 +1,10 @@
 package com.company;
 
 public class MoneyBox {
-    private Money currentAmount;
     private int totalAmount = 0;
-    private DrinkButton drinkButton = new DrinkButton();
 
-    public int add(Money money) {
-        this.totalAmount += money.getValue();
+    public int add(int amount) {
+        this.totalAmount += amount;
         System.out.println(this.totalAmount);
         return this.totalAmount;
     }
