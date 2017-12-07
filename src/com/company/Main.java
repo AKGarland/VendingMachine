@@ -4,16 +4,17 @@ import java.util.Scanner;
 
 public class Main {
 
+    static VendingMachine vendingMachine = new VendingMachine(new ConsoleDisplay());
+
     public static void main(String[] args){
-        Money money = new Money();
-        VendingMachine vendingMachine = new VendingMachine(new ConsoleDisplay());
-
-        vendingMachine.insertCoin(250);
-
-        vendingMachine.pushButton(2);
 
 
+        runMenu();
+    }
 
+    private static void runMenu() {
+        IDisplay display = vendingMachine.getDisplay();
+        vendingMachine.stockList().printMenu();
     }
 
 }

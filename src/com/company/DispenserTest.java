@@ -7,7 +7,6 @@ import static org.junit.Assert.assertEquals;
 public class DispenserTest implements IDisplay, IStock {
     private Dispenser dispenser = new Dispenser();
     private VendingMachine vendingMachine = new VendingMachine(this);
-    private Money money = new Money();
     private String text;
     private String name;
     private int price;

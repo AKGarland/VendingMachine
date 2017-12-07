@@ -23,6 +23,10 @@ public class VendingMachine {
         input(amount, paymentCard);
     }
 
+    public IDisplay getDisplay() {
+        return display;
+    }
+
     private void input(int amount, PaymentInterface payment) {
         payment.takePayment();
 

@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 public class StockList {
     public ArrayList<IStock> menu = new ArrayList<>();
+    private IDisplay display = new ConsoleDisplay();
 
     public StockList() {
         this.menu = new ArrayList<>();
@@ -24,10 +25,6 @@ public class StockList {
         this.menu.add(sweetcornBbq);
         this.menu.add(cheesyfries);
         this.menu.add(perifries);
-
-        for (IStock stock: menu) {
-            System.out.println(stock.getName() + " costs " + stock.getPrice());
-        }
     }
 
     public ArrayList<IStock> getMenu() {
@@ -43,8 +40,15 @@ public class StockList {
         return menu.get(number-1);
     }
 
+    public void printMenu() {
+        this.display.show("\n**********MENU**********");
+        for (IStock stock: menu) {
+            this.display.show(stock.getName() + " costs " + stock.getPrice());
+        }
+        this.display.show("\n");
+    }
+
     public void addStockToList(IStock stock) {
         this.menu.add(stock);
-        System.out.println(stock.getName() + " has been added to the vending machine.");
     }
 }

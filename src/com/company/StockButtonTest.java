@@ -22,7 +22,6 @@ public class StockButtonTest {
     public void hasMethodThatReturnsTrueWhenComparingAdequateMoneyBoxTotalWithDrinkPrice() {
         moneyBox = new MoneyBox();
         stockButton = new StockButton();
-        Money money = new Money();
         moneyBox.add(400);
 
         stockButton.stockPurchasable(moneyBox, greenTea);

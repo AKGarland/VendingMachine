@@ -6,15 +6,12 @@ import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 
 public class VendingMachineTest implements IDisplay {
-    private Money money;
     private VendingMachine vendingMachine;
     private StockButton stockButton = new StockButton();
-    private Coins coins = new Coins();
     private String text;
 
     @Before
     public void setUp() {
-        money = new Money();
         vendingMachine = new VendingMachine(this);
     }
 
